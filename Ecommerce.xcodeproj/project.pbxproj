@@ -149,6 +149,7 @@
 				C402CEF32B3D9705002606A5 /* Sources */,
 				C402CEF42B3D9705002606A5 /* Frameworks */,
 				C402CEF52B3D9705002606A5 /* Resources */,
+				C40D79C02B3EFC2200BBFD42 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -203,6 +204,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C40D79C02B3EFC2200BBFD42 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C402CEF32B3D9705002606A5 /* Sources */ = {
@@ -346,6 +368,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Ecommerce/Resources\"";
 				DEVELOPMENT_TEAM = 3S952AGH46;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -375,6 +398,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Ecommerce/Resources\"";
 				DEVELOPMENT_TEAM = 3S952AGH46;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
