@@ -51,20 +51,92 @@
 		C402CEF92B3D9705002606A5 /* Ecommerce */ = {
 			isa = PBXGroup;
 			children = (
-				C402CEFA2B3D9705002606A5 /* EcommerceApp.swift */,
-				C402CEFC2B3D9705002606A5 /* ContentView.swift */,
-				C402CEFE2B3D9707002606A5 /* Assets.xcassets */,
-				C402CF002B3D9707002606A5 /* Preview Content */,
+				C4BA231B2B3E475E00F89DF8 /* Core */,
+				C4BA23192B3E474500F89DF8 /* Sources */,
+				C4BA231A2B3E474E00F89DF8 /* Resources */,
 			);
 			path = Ecommerce;
 			sourceTree = "<group>";
 		};
-		C402CF002B3D9707002606A5 /* Preview Content */ = {
+		C4BA23192B3E474500F89DF8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C4BA231C2B3E476900F89DF8 /* Presentation */,
+				C4BA231D2B3E477100F89DF8 /* Domain */,
+				C4BA231E2B3E477800F89DF8 /* Data */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C4BA231A2B3E474E00F89DF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C402CEFE2B3D9707002606A5 /* Assets.xcassets */,
 				C402CF012B3D9707002606A5 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C4BA231B2B3E475E00F89DF8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C4BA231C2B3E476900F89DF8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C4BA23222B3ECFF700F89DF8 /* Application */,
+				C4BA23212B3E47D900F89DF8 /* Views */,
+				C4BA23202B3E47CD00F89DF8 /* ViewModels */,
+				C4BA231F2B3E47C000F89DF8 /* Components */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C4BA231D2B3E477100F89DF8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C4BA231E2B3E477800F89DF8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C4BA231F2B3E47C000F89DF8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C4BA23202B3E47CD00F89DF8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4BA23212B3E47D900F89DF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C402CEFC2B3D9705002606A5 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4BA23222B3ECFF700F89DF8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C402CEFA2B3D9705002606A5 /* EcommerceApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Ecommerce/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Ecommerce/Resources\"";
 				DEVELOPMENT_TEAM = 3S952AGH46;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -300,7 +372,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Ecommerce/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Ecommerce/Resources\"";
 				DEVELOPMENT_TEAM = 3S952AGH46;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
