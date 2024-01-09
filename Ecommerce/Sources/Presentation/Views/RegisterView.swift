@@ -1,21 +1,23 @@
 //
-//  CartView.swift
+//  RegisterView.swift
 //  Ecommerce
 //
-//  Created by Raúl Pera Pairó on 31/12/23.
+//  Created by Raúl Pera Pairó on 4/1/24.
 //
 
 import SwiftUI
 
-struct CartView: View {
+struct RegisterView: View {
     // MARK: - Properties
     let container: DependencyContainer
-    
-    @ObservedObject var viewModel: CartViewModel
 
+    @EnvironmentObject var sessionManager: SessionManager
+    @ObservedObject var viewModel: RegisterViewModel
+
+    // MARK: - Constructors
     init(container: DependencyContainer) {
         self.container = container
-        self.viewModel = container.makeCartViewModel()
+        self.viewModel = container.makeRegisterViewModel()
     }
 
     var body: some View {

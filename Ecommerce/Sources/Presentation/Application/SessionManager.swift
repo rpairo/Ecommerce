@@ -8,5 +8,6 @@
 import Foundation
 
 class SessionManager: ObservableObject {
+    // MARK: - Properties
     @Published var isAuthenticated: Bool = false
 }

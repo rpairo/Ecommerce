@@ -1,13 +1,13 @@
 //
-//  AuthViewModel.swift
+//  FavoritesViewModel.swift
 //  Ecommerce
 //
-//  Created by Raúl Pera Pairó on 29/12/23.
+//  Created by Raúl Pera Pairó on 9/1/24.
 //
 
 import Foundation
 
-class AuthViewModel: ObservableObject {
+class FavoritesViewModel: ObservableObject {
     var coordinator: NavigationCoordinator?
 
     init(coordinator: NavigationCoordinator?) {

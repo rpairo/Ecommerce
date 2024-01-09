@@ -8,27 +8,31 @@
 import SwiftUI
 
 struct MainTabView: View {
+    // MARK: - Properties
+    let container: DependencyContainer
+
+    init(container: DependencyContainer) {
+        self.container = container
+    }
+
+    // MARK: - Views
     var body: some View {
         TabView {
-            DiscoverView().tabItem {
+            DiscoverView(container: self.container).tabItem {
                 Label("Discover", systemImage: "magnifyingglass")
             }
-            CatalogView().tabItem {
+            CatalogView(container: self.container).tabItem {
                 Label("Catalog", systemImage: "list.bullet")
             }
-            CartView().tabItem {
+            CartView(container: self.container).tabItem {
                 Label("Cart", systemImage: "cart")
             }
-            FavoritesView().tabItem {
+            FavoritesView(container: self.container).tabItem {
                 Label("Favorites", systemImage: "heart")
             }
-            SettingsView().tabItem {
+            SettingsView(container: self.container).tabItem {
                 Label("Settings", systemImage: "gear")
             }
         }
     }
-}
-
-#Preview {
-    MainTabView()
 }

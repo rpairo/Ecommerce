@@ -9,22 +9,21 @@ import SwiftUI
 
 @main
 struct EcommerceApp: App {
+    // MARK: - Properties
+    let container = DependencyContainer()
+
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject private var sessionManager = SessionManager()
 
+    // MARK: - Views
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                if sessionManager.isAuthenticated {
-                    MainTabView()
-                        .environmentObject(sessionManager)
-                } else {
-                    AuthView(
-                        viewModel: AuthViewModel(
-                            authUseCase: AuthUseCase()
-                        )
-                    ).environmentObject(sessionManager)
-                }
+            if sessionManager.isAuthenticated {
+                MainTabView(container: container)
+                    .environmentObject(sessionManager)
+            } else {
+                AuthView(container: container)
+                    .environmentObject(sessionManager)
             }
         }
     }

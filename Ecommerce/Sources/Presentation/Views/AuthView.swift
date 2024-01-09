@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct AuthView: View {
+    // MARK: - Properties
+    let container: DependencyContainer
+
+    @ObservedObject var coordinator: NavigationCoordinator
     @ObservedObject var viewModel: AuthViewModel
 
+    // MARK: - Constructors
+    init(container: DependencyContainer) {
+        self.container = container
+        self.viewModel = container.makeAuthViewModel()
+        self.coordinator = container.coordinator
+    }
+
+    // MARK: - Views
     var body: some View {
-        ZStack {
-            BackgroundImageView(imageName: "AuthBackground")
-            ContentOverlayView(viewModel: viewModel)
+        NavigationStack(path: $coordinator.path) {
+            ZStack {
+                BackgroundImageView(imageName: "AuthBackground")
+                ContentOverlayView(viewModel: viewModel)
+            }
+            .navigationDestination(for: NavigationDestination.self) { destination in
+                switch destination {
+                case .login:
+                    LoginView(container: container)
+                case .register:
+                    RegisterView(container: container)
+                }
+            }
         }
+        .environmentObject(coordinator)
     }
 }
 
@@ -67,8 +90,13 @@ struct AuthButtonsView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            SignInButton(action: viewModel.signIn)
-            RegisterButton(action: viewModel.register)
+            SignInButton {
+                viewModel.showLogin()
+            }
+
+            RegisterButton {
+                viewModel.showRegister()
+            }
         }
         .padding(.horizontal, 20)
         .padding(.bottom, 50)
