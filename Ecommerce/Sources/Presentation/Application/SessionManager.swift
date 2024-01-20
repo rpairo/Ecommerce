@@ -5,9 +5,18 @@
 //  Created by Raúl Pera Pairó on 30/12/23.
 //
 
-import Foundation
+import FirebaseAuth
 
 class SessionManager: ObservableObject {
-    // MARK: - Properties
     @Published var isAuthenticated: Bool = false
+
+    init() {
+        setupAuthListener()
+    }
+
+    private func setupAuthListener() {
+        Auth.auth().addStateDidChangeListener { [weak self] (_, user) in
+            self?.isAuthenticated = user != nil
+        }
+    }
 }

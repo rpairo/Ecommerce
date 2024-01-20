@@ -8,7 +8,7 @@
 import Foundation
 
 class OrderUseCase: OrderUseCaseProtocol {
-    
+
     private let repository: Ordeable
 
     init(repository: Ordeable) {

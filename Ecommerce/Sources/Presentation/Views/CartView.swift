@@ -10,7 +10,7 @@ import SwiftUI
 struct CartView: View {
     // MARK: - Properties
     let container: DependencyContainer
-    
+
     @ObservedObject var viewModel: CartViewModel
 
     init(container: DependencyContainer) {
