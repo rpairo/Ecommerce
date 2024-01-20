@@ -21,9 +21,11 @@ struct EcommerceApp: App {
             if sessionManager.isAuthenticated {
                 MainTabView(container: container)
                     .environmentObject(sessionManager)
+                    .foregroundColor(.customBlue)
             } else {
                 AuthView(container: container)
                     .environmentObject(sessionManager)
+                    .foregroundColor(.customBlue)
             }
         }
     }

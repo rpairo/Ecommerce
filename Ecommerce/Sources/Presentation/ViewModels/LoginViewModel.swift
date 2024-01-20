@@ -23,13 +23,12 @@ class LoginViewModel: ObservableObject {
     }
 
     // MARK: - Methods
-    func signIn() {
+    func signIn(completion: @escaping (User) -> Void) {
         authUseCase.signIn(email: email, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let user):
-                    self?.isAuthenticated = true
-                    self?.errorMessage = nil
+                    completion(user)
 
                 case .failure(let error):
                     self?.errorMessage = error.localizedDescription

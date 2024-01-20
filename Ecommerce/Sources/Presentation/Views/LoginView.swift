@@ -11,7 +11,6 @@ struct LoginView: View {
     // MARK: - Properties
     let container: DependencyContainer
 
-    @EnvironmentObject var sessionManager: SessionManager
     @ObservedObject var viewModel: LoginViewModel
 
     // MARK: - Constructors
@@ -39,7 +38,9 @@ struct LoginView: View {
             }
 
             Button("Sign In") {
-                viewModel.signIn()
+                viewModel.signIn { username in
+                    print("Usuario logueado: \(username)")
+                }
             }
             .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
         }

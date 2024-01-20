@@ -18,7 +18,65 @@ struct SettingsView: View {
         self.viewModel = container.makeSettingsViewModel()
     }
 
+    @State private var notificationsEnabled = true
+    @State private var recommendationsEnabled = true
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                Section(header: Text("ACCOUNT")) {
+                    HStack {
+                        Image(systemName: "envelope")
+                        Text("Email")
+                        Spacer()
+                        NonSelectableLabel(text: "raul_pairo@icloud.com", textColor: .gray)
+                    }
+
+                    HStack {
+                        Image(systemName: "lock")
+                        Text("Password")
+                        Spacer()
+                        Text("••••••••••")
+                            .foregroundColor(.gray)
+                    }
+                }
+
+                Section(header: Text("CONFIGURATION")) {
+                    Toggle(isOn: $notificationsEnabled) {
+                        HStack {
+                            Image(systemName: "bell")
+                            Text("Notifications")
+                        }
+                    }
+
+                    Toggle(isOn: $recommendationsEnabled) {
+                        HStack {
+                            Image(systemName: "hand.thumbsup")
+                            Text("Suggestions")
+                        }
+                    }
+                }
+
+                Section(header: Text("DATA")) {
+                    NavigationLink(destination: Text("Customer Service")) {
+                        Image(systemName: "person.crop.circle")
+                        Text("Atención al cliente")
+                    }
+
+                    NavigationLink(destination: Text("Information")) {
+                        Image(systemName: "info.circle")
+                        Text("Información")
+                    }
+                }
+
+                Section {
+                    Button(action: viewModel.signOut) {
+                        Text("Sign Off")
+                            .foregroundColor(.red)
+                    }
+                }
+            }
+            .navigationBarTitle("Settings")
+        }
     }
 }

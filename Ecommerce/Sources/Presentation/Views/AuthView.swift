@@ -11,6 +11,7 @@ struct AuthView: View {
     // MARK: - Properties
     let container: DependencyContainer
 
+    @EnvironmentObject var sessionManager: SessionManager
     @ObservedObject var coordinator: NavigationCoordinator
     @ObservedObject var viewModel: AuthViewModel
 
@@ -34,6 +35,11 @@ struct AuthView: View {
                     LoginView(container: container)
                 case .register:
                     RegisterView(container: container)
+                }
+            }
+            .onChange(of: sessionManager.isAuthenticated) {
+                if sessionManager.isAuthenticated {
+                    coordinator.path.removeLast()
                 }
             }
         }

@@ -62,7 +62,7 @@ class FirebaseAuthRepository: Authenticatable {
     }
 
     // MARK: - Cerrar Sesión
-    func signOut(completion: @escaping (Result<Void, Error>) -> Void) {
+    func signOut(completion: @escaping SignOutResult) {
         do {
             try Auth.auth().signOut()
             completion(.success(()))

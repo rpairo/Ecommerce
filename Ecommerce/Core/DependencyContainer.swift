@@ -41,7 +41,7 @@ class DependencyContainer {
     }
 
     func makeSettingsViewModel() -> SettingsViewModel {
-        SettingsViewModel(coordinator: self.coordinator)
+        SettingsViewModel(coordinator: self.coordinator, authUseCase: self.makeAuthUseCase())
     }
 
     // MARK: - UseCases

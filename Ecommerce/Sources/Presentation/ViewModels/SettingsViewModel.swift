@@ -9,16 +9,18 @@ import Foundation
 
 class SettingsViewModel: ObservableObject {
     var coordinator: NavigationCoordinator?
+    
+    // MARK: - Use case
+    private let authUseCase: AuthUseCaseProtocol
 
-    init(coordinator: NavigationCoordinator?) {
+    init(coordinator: NavigationCoordinator?, authUseCase: AuthUseCaseProtocol) {
         self.coordinator = coordinator
+        self.authUseCase = authUseCase
     }
 
-    func showLogin() {
-        coordinator?.navigate(to: .login)
-    }
-
-    func showRegister() {
-        coordinator?.navigate(to: .register)
+    func signOut() {
+        self.authUseCase.signOut { _ in
+            
+        }
     }
 }

@@ -9,8 +9,10 @@ import Foundation
 
 // MARK: Result
 typealias AuthResult = (Result<User, Error>) -> Void
+typealias SignOutResult = (Result<Void, Error>) -> Void
 
 protocol AuthUseCaseProtocol {
     func signIn(email: String, password: String, completion: @escaping AuthResult)
     func register(email: String, password: String, completion: @escaping AuthResult)
+    func signOut(completion: @escaping SignOutResult)
 }

@@ -57,6 +57,8 @@
 		C4407E662B4DEC8500DF0C8D /* OrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4407E652B4DEC8500DF0C8D /* OrderUseCase.swift */; };
 		C4407E682B4DEC9F00DF0C8D /* LogUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4407E672B4DEC9F00DF0C8D /* LogUseCaseProtocol.swift */; };
 		C4407E6A2B4DECAC00DF0C8D /* LogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4407E692B4DECAC00DF0C8D /* LogUseCase.swift */; };
+		C45C1C202B5C715900EC896E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45C1C1F2B5C715900EC896E /* Colors.xcassets */; };
+		C45C1C222B5C742800EC896E /* NonSelectableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C1C212B5C742800EC896E /* NonSelectableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		C4407E652B4DEC8500DF0C8D /* OrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderUseCase.swift; sourceTree = "<group>"; };
 		C4407E672B4DEC9F00DF0C8D /* LogUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUseCaseProtocol.swift; sourceTree = "<group>"; };
 		C4407E692B4DECAC00DF0C8D /* LogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUseCase.swift; sourceTree = "<group>"; };
+		C45C1C1F2B5C715900EC896E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C45C1C212B5C742800EC896E /* NonSelectableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonSelectableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			children = (
 				C402CEFE2B3D9707002606A5 /* Assets.xcassets */,
 				C402CF012B3D9707002606A5 /* Preview Assets.xcassets */,
+				C45C1C1F2B5C715900EC896E /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 		C4BA231F2B3E47C000F89DF8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C45C1C212B5C742800EC896E /* NonSelectableLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C402CF022B3D9707002606A5 /* Preview Assets.xcassets in Resources */,
+				C45C1C202B5C715900EC896E /* Colors.xcassets in Resources */,
 				C402CEFF2B3D9707002606A5 /* Assets.xcassets in Resources */,
 				C43796102B45F384009EAD1B /* GoogleService-Info.plist in Resources */,
 			);
@@ -442,6 +449,7 @@
 				C43796122B46FD69009EAD1B /* LoginView.swift in Sources */,
 				C4407E502B4DE75800DF0C8D /* CartViewModel.swift in Sources */,
 				C4407E5E2B4DEC0E00DF0C8D /* FirebaseOrderRepository.swift in Sources */,
+				C45C1C222B5C742800EC896E /* NonSelectableLabel.swift in Sources */,
 				C437960D2B4225C4009EAD1B /* AppDelegate.swift in Sources */,
 				C43795C42B3F2B8D009EAD1B /* AuthUseCase.swift in Sources */,
 				C43796212B4731A1009EAD1B /* RegisterViewModel.swift in Sources */,

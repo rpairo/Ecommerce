@@ -8,7 +8,6 @@
 import Foundation
 
 class AuthUseCase: AuthUseCaseProtocol {
-
     private let repository: Authenticatable
 
     init(repository: Authenticatable) {
@@ -21,5 +20,9 @@ class AuthUseCase: AuthUseCaseProtocol {
 
     func register(email: String, password: String, completion: @escaping AuthResult) {
         repository.register(email: email, password: password, completion: completion)
+    }
+
+    func signOut(completion: @escaping SignOutResult) {
+        repository.signOut(completion: completion)
     }
 }
