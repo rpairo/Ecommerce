@@ -9,4 +9,5 @@ import Foundation
 
 protocol Productable {
     func fetchProducts(for category: String, completion: @escaping ProductResult)
+    func fetchFavouriteProducts(completion: @escaping ProductResult)
 }

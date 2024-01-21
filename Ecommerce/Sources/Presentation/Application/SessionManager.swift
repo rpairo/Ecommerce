@@ -10,6 +10,10 @@ import FirebaseAuth
 class SessionManager: ObservableObject {
     @Published var isAuthenticated: Bool = false
 
+    var user: String? {
+        Auth.auth().currentUser?.email
+    }
+
     init() {
         setupAuthListener()
     }

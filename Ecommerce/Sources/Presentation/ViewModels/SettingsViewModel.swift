@@ -9,7 +9,7 @@ import Foundation
 
 class SettingsViewModel: ObservableObject {
     var coordinator: NavigationCoordinator?
-    
+
     // MARK: - Use case
     private let authUseCase: AuthUseCaseProtocol
 
@@ -20,7 +20,7 @@ class SettingsViewModel: ObservableObject {
 
     func signOut() {
         self.authUseCase.signOut { _ in
-            
+            print("Sign out")
         }
     }
 }

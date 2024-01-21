@@ -10,7 +10,7 @@ import FirebaseFirestore
 class FirebaseProductRepository: Productable {
     private let database = Firestore.firestore()
 
-    func fetchProducts(for category: String, completion: @escaping (Result<[Product], Error>) -> Void) {
+    func fetchProducts(for category: String, completion: @escaping ProductResult) {
         database.collection("products")
             .whereField("category", isEqualTo: category)
             .getDocuments { (querySnapshot, error) in
@@ -37,7 +37,7 @@ class FirebaseProductRepository: Productable {
         }
     }
 
-    func fetchFavouriteProducts(completion: @escaping (Result<[Product], Error>) -> Void) {
+    func fetchFavouriteProducts(completion: @escaping ProductResult) {
         database.collection("products")
             .whereField("favourite", isEqualTo: true)
             .getDocuments { (querySnapshot, error) in

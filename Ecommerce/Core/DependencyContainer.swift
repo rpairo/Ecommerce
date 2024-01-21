@@ -40,8 +40,8 @@ class DependencyContainer {
         CartViewModel(coordinator: self.coordinator)
     }
 
-    func makeFavoritesViewModel() -> FavoritesViewModel {
-        FavoritesViewModel(coordinator: self.coordinator)
+    func makeFavoritesViewModel() -> FavouritesViewModel {
+        FavouritesViewModel(favouriteUseCase: makeFavouriteUseCase())
     }
 
     func makeSettingsViewModel() -> SettingsViewModel {
@@ -59,6 +59,10 @@ class DependencyContainer {
 
     func makeProductUseCase() -> ProductUseCaseProtocol {
         ProductUseCase(repository: makeProductRepository())
+    }
+
+    func makeFavouriteUseCase() -> FavouriteUseCaseProtocol {
+        FavouriteUseCase(repository: makeProductRepository())
     }
 
     // MARK: - Repositories

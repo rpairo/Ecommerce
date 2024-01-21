@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    // MARK: - Properties
+    @State private var searchText = ""
+    @ObservedObject var viewModel: FavouritesViewModel
     let container: DependencyContainer
 
-    @ObservedObject var viewModel: FavoritesViewModel
-
+    // MARK: - Constructors
     init(container: DependencyContainer) {
         self.container = container
         self.viewModel = container.makeFavoritesViewModel()
     }
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                SearchBar(searchText: $searchText)
+                List(viewModel.filteredFavourites) { favourite in
+                    NavigationLink(destination: ProductView(product: favourite)) {
+                        ProductRow(product: favourite)
+                    }
+                }
+                .listStyle(PlainListStyle())
+                .background(Color.white)
+                .scrollIndicators(.never)
+            }
+
+            .navigationTitle("Favourites")
+        }
+        .onAppear {
+            viewModel.loadFavourites()
+        }
+        .onChange(of: searchText) {
+            viewModel.filterCategories(with: searchText)
+        }
     }
 }
