@@ -11,6 +11,7 @@ struct SettingsView: View {
     // MARK: - Properties
     let container: DependencyContainer
 
+    @EnvironmentObject var sessionManager: SessionManager
     @ObservedObject var viewModel: SettingsViewModel
 
     init(container: DependencyContainer) {
@@ -29,7 +30,7 @@ struct SettingsView: View {
                         Image(systemName: "envelope")
                         Text("Email")
                         Spacer()
-                        NonSelectableLabel(text: "raul_pairo@icloud.com", textColor: .gray)
+                        NonSelectableLabel(text: sessionManager.user ?? "--", textColor: .gray)
                     }
 
                     HStack {
