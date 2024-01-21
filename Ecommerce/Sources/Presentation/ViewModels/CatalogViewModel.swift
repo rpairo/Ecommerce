@@ -13,8 +13,8 @@ class CatalogViewModel: ObservableObject {
     @Published var isLoading = false
     private let fetchCategoriesUseCase: CategoryUseCaseProtocol
 
-    init(fetchCategoriesUseCase: CategoryUseCaseProtocol) {
-        self.fetchCategoriesUseCase = fetchCategoriesUseCase
+    init(categoriesUseCase: CategoryUseCaseProtocol) {
+        self.fetchCategoriesUseCase = categoriesUseCase
     }
 
     func loadCategories() {

@@ -20,6 +20,7 @@ class FirebaseCategoryRepository: Categoriable {
             }
 
             let categories = snapshot?.documents.compactMap { document -> Category? in
+                print(document.documentID)
                 guard let dto = try? document.data(as: CategoryDTO.self) else { return nil }
 
                 return Category(

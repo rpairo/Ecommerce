@@ -24,7 +24,9 @@ struct CatalogView: View {
                 LazyVStack(spacing: 1) {
                     SearchBar(searchText: $searchText)
                     ForEach(viewModel.filteredCategories, id: \.id) { category in
-                        CategoryCell(category: category)
+                        NavigationLink(destination: CategoryView(category: category, container: self.container)) {
+                            CategoryCell(category: category)
+                        }
                     }
                 }
                 .navigationBarTitle("Catalog", displayMode: .large)

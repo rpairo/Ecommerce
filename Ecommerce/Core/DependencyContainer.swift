@@ -29,7 +29,11 @@ class DependencyContainer {
     }
 
     func makeCatalogViewModel() -> CatalogViewModel {
-        CatalogViewModel(fetchCategoriesUseCase: makeCategoryUseCase())
+        CatalogViewModel(categoriesUseCase: makeCategoryUseCase())
+    }
+
+    func makeCategoryViewModel(category: Category) -> CategoryViewModel {
+        CategoryViewModel(category: category, productUseCase: makeProductUseCase())
     }
 
     func makeCartViewModel() -> CartViewModel {
@@ -53,6 +57,10 @@ class DependencyContainer {
         CategoryUseCase(repository: makeCategoryRepository())
     }
 
+    func makeProductUseCase() -> ProductUseCaseProtocol {
+        ProductUseCase(repository: makeProductRepository())
+    }
+
     // MARK: - Repositories
     func makeAuthRepository() -> Authenticatable {
         FirebaseAuthRepository()
@@ -60,5 +68,9 @@ class DependencyContainer {
 
     func makeCategoryRepository() -> Categoriable {
         FirebaseCategoryRepository()
+    }
+
+    func makeProductRepository() -> Productable {
+        FirebaseProductRepository()
     }
 }

@@ -48,6 +48,7 @@ struct SettingsView: View {
                             Text("Notifications")
                         }
                     }
+                    .tint(.customBlue)
 
                     Toggle(isOn: $recommendationsEnabled) {
                         HStack {
@@ -55,6 +56,7 @@ struct SettingsView: View {
                             Text("Suggestions")
                         }
                     }
+                    .tint(.customBlue)
                 }
 
                 Section(header: Text("DATA")) {
