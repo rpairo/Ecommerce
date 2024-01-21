@@ -38,7 +38,7 @@ struct AuthView: View {
                 }
             }
             .onChange(of: sessionManager.isAuthenticated) {
-                if sessionManager.isAuthenticated {
+                if sessionManager.isAuthenticated && !coordinator.path.isEmpty {
                     coordinator.path.removeLast()
                 }
             }

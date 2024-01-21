@@ -22,10 +22,14 @@ struct EcommerceApp: App {
                 MainTabView(container: container)
                     .environmentObject(sessionManager)
                     .foregroundColor(.customBlue)
+                    .transition(.opacity)
+                    .animation(.easeInOut(duration: 0.5), value: sessionManager.isAuthenticated)
             } else {
                 AuthView(container: container)
                     .environmentObject(sessionManager)
                     .foregroundColor(.customBlue)
+                    .transition(.opacity)
+                    .animation(.easeInOut(duration: 0.5), value: sessionManager.isAuthenticated)
             }
         }
     }
