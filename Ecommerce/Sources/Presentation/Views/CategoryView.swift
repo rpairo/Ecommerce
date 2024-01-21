@@ -83,7 +83,7 @@ struct ProductRow: View {
                     .font(.subheadline)
                     .padding(.horizontal, 20)
 
-                Text("\(product.price.formatted()) €")
+                Text("\(product.price, format: .number.precision(.fractionLength(2))) €")
                     .font(.body)
                     .padding(.top, 10)
                     .padding(.horizontal, 20)

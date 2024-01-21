@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "queso-ojos-del-guadiana.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

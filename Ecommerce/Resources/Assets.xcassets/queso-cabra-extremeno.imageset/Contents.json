@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "queso-cabra-extremeno.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
