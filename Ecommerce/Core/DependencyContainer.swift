@@ -37,7 +37,7 @@ class DependencyContainer {
     }
 
     func makeCartViewModel() -> CartViewModel {
-        CartViewModel(coordinator: self.coordinator)
+        CartViewModel(cartUseCase: makeCartUseCase())
     }
 
     func makeFavoritesViewModel() -> FavouritesViewModel {

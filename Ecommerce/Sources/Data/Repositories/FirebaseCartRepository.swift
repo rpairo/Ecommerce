@@ -16,7 +16,6 @@ class FirebaseCartRepository: Cartable {
         let document = database.collection("cart").document(product.id)
 
         let data: [String: Any] = [
-            "id": product.id,
             "manufacturer": product.manufacturer,
             "description": product.description,
             "favourite": product.favourite,
@@ -43,7 +42,7 @@ class FirebaseCartRepository: Cartable {
             }
 
             let products = snapshot?.documents.compactMap { document -> Product? in
-                guard let productDTO = try? document.data(as: ProductDTO.self) else { return nil }
+                guard let productDTO = try? document.data(as: ProductCartDTO.self) else { return nil }
 
                 return Product(
                     id: document.documentID,

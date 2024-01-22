@@ -37,7 +37,7 @@ struct ProductView: View {
                     .foregroundColor(.gray)
 
                 HStack(alignment: .center) {
-                    Text("\(product.price, format: .number.precision(.fractionLength(2))) €")
+                    Text("\(product.price, format: .currency(code: "EUR"))")
                         .font(.title)
                         .padding(.leading)
 
@@ -45,12 +45,14 @@ struct ProductView: View {
                         Text("Add to Basket")
                             .foregroundColor(.white)
                             .padding()
+                            .frame(height: 50)
                             .frame(maxWidth: .infinity)
                             .background(Color.customBlue)
                             .cornerRadius(10)
                     }
                     .padding(.horizontal)
                 }
+                .padding(.bottom, 20)
             }
         }
         .navigationBarItems(trailing: Button(action: viewModel.markAsFavourite) {

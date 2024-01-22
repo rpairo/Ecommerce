@@ -84,6 +84,7 @@
 		C4C4B1242B5E042D0009E741 /* CartUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1232B5E042D0009E741 /* CartUseCaseProtocol.swift */; };
 		C4C4B1262B5E048E0009E741 /* CartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1252B5E048E0009E741 /* CartUseCase.swift */; };
 		C4C4B1282B5E05000009E741 /* FirebaseCartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1272B5E05000009E741 /* FirebaseCartRepository.swift */; };
+		C4C4B12A2B5E0EF00009E741 /* CartProductDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1292B5E0EF00009E741 /* CartProductDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		C4C4B1232B5E042D0009E741 /* CartUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCaseProtocol.swift; sourceTree = "<group>"; };
 		C4C4B1252B5E048E0009E741 /* CartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCase.swift; sourceTree = "<group>"; };
 		C4C4B1272B5E05000009E741 /* FirebaseCartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCartRepository.swift; sourceTree = "<group>"; };
+		C4C4B1292B5E0EF00009E741 /* CartProductDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 			children = (
 				C45C1C282B5D548800EC896E /* CategoryDTO.swift */,
 				C43026442B5DA6B50024ABA9 /* ProductDTO.swift */,
+				C4C4B1292B5E0EF00009E741 /* CartProductDTO.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				C4C4B1262B5E048E0009E741 /* CartUseCase.swift in Sources */,
 				C43796182B470413009EAD1B /* User.swift in Sources */,
 				C4407E582B4DEADB00DF0C8D /* Product.swift in Sources */,
+				C4C4B12A2B5E0EF00009E741 /* CartProductDTO.swift in Sources */,
 				C4C4B1282B5E05000009E741 /* FirebaseCartRepository.swift in Sources */,
 				C4407E662B4DEC8500DF0C8D /* OrderUseCase.swift in Sources */,
 				C43795CA2B405D4B009EAD1B /* MainTabView.swift in Sources */,
