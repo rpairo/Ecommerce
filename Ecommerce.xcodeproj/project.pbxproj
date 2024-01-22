@@ -75,6 +75,7 @@
 		C45C1C2F2B5D56E600EC896E /* CategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C1C2E2B5D56E600EC896E /* CategoryUseCase.swift */; };
 		C4C4B1142B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1132B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift */; };
 		C4C4B1162B5DE03B0009E741 /* FavouriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1152B5DE03B0009E741 /* FavouriteUseCase.swift */; };
+		C4C4B1182B5DF2D10009E741 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1172B5DF2D10009E741 /* ProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		C45C1C2E2B5D56E600EC896E /* CategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUseCase.swift; sourceTree = "<group>"; };
 		C4C4B1132B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteUseCaseProtocol.swift; sourceTree = "<group>"; };
 		C4C4B1152B5DE03B0009E741 /* FavouriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteUseCase.swift; sourceTree = "<group>"; };
+		C4C4B1172B5DF2D10009E741 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 				C4407E512B4DE76900DF0C8D /* FavouritesViewModel.swift */,
 				C4407E532B4DE77800DF0C8D /* SettingsViewModel.swift */,
 				C43026382B5D825C0024ABA9 /* CategoryViewModel.swift */,
+				C4C4B1172B5DF2D10009E741 /* ProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				C43795BB2B3F29CE009EAD1B /* AuthView.swift in Sources */,
 				C45C1C262B5D546A00EC896E /* Category.swift in Sources */,
 				C43795CE2B421DBA009EAD1B /* CatalogView.swift in Sources */,
+				C4C4B1182B5DF2D10009E741 /* ProductViewModel.swift in Sources */,
 				C4407E682B4DEC9F00DF0C8D /* LogUseCaseProtocol.swift in Sources */,
 				C43026452B5DA6B50024ABA9 /* ProductDTO.swift in Sources */,
 				C45C1C2B2B5D54C500EC896E /* FirebaseCategoryRepository.swift in Sources */,

@@ -23,7 +23,7 @@ struct FavoritesView: View {
             VStack {
                 SearchBar(searchText: $searchText)
                 List(viewModel.filteredFavourites) { favourite in
-                    NavigationLink(destination: ProductView(product: favourite)) {
+                    NavigationLink(destination: ProductView(product: favourite, container: container)) {
                         ProductRow(product: favourite)
                     }
                 }

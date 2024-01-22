@@ -45,7 +45,7 @@ struct CategoryView: View {
 
                 Text(category.description)
                     .font(.headline)
-                    .foregroundColor(.white.opacity(0.7))
+                    .foregroundColor(.white)
             }
             .frame(height: 260)
         }
@@ -53,7 +53,7 @@ struct CategoryView: View {
 
     var productList: some View {
         List(viewModel.products) { product in
-            NavigationLink(destination: ProductView(product: product)) {
+            NavigationLink(destination: ProductView(product: product, container: container)) {
                 ProductRow(product: product)
             }
         }

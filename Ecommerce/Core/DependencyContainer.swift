@@ -48,6 +48,10 @@ class DependencyContainer {
         SettingsViewModel(coordinator: self.coordinator, authUseCase: self.makeAuthUseCase())
     }
 
+    func makeProductViewModel(product: Product) -> ProductViewModel {
+        ProductViewModel(product: product)
+    }
+
     // MARK: - UseCases
     func makeAuthUseCase() -> AuthUseCaseProtocol {
         AuthUseCase(repository: makeAuthRepository())

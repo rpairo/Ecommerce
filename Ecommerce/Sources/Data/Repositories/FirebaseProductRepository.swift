@@ -20,7 +20,6 @@ class FirebaseProductRepository: Productable {
             }
 
             let products = querySnapshot?.documents.compactMap { document -> Product? in
-                print(document.documentID)
                 guard let productDTO = try? document.data(as: ProductDTO.self) else { return nil }
                 return Product(
                     id: document.documentID,
@@ -47,7 +46,6 @@ class FirebaseProductRepository: Productable {
             }
 
             let products = querySnapshot?.documents.compactMap { document -> Product? in
-                print(document.documentID)
                 guard let productDTO = try? document.data(as: ProductDTO.self) else { return nil }
                 return Product(
                     id: document.documentID,

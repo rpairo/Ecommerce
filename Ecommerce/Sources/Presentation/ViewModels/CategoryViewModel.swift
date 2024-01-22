@@ -29,7 +29,6 @@ class CategoryViewModel: ObservableObject {
                 switch result {
                 case .success(let products):
                     self?.products = products
-                    print("Products ViewModel: \(products.count)")
                 case .failure(let error):
                     // Manejar el error, por ejemplo, mostrando un mensaje al usuario
                     print(error.localizedDescription)
