@@ -63,12 +63,12 @@ struct SettingsView: View {
                 Section(header: Text("DATA")) {
                     NavigationLink(destination: Text("Customer Service")) {
                         Image(systemName: "person.crop.circle")
-                        Text("Atención al cliente")
+                        Text("Customer Service")
                     }
 
                     NavigationLink(destination: Text("Information")) {
                         Image(systemName: "info.circle")
-                        Text("Información")
+                        Text("Information")
                     }
                 }
 

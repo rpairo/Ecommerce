@@ -14,8 +14,8 @@ struct DiscoverView: View {
     @ObservedObject var viewModel: DiscoverViewModel
 
     let cards: [Card] = [
-        Card(image: "discover_card_1", title: "El arte de la \nOlivicultura", description: "Adéntrate en el extraordinario mundo del estudio del aceite", category: "Gourmet"),
-        Card(image: "discover_card_2", title: "Tabla de foie", description: "Adéntrate en el extraordinario mundo del estudio del aceite", category: "Degustación"),
+        Card(image: "discover_card_1", title: "The Art of \nOlive Growing", description: "Delve into the Extraordinary World of Oil Study", category: "Gourmet"),
+        Card(image: "discover_card_2", title: "Table of Foie Gras", description: "Delve into the Extraordinary Flavor of Foie Gras and Its Pairings", category: "Tasting"),
     ]
 
 

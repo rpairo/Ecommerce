@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductView: View {
     @ObservedObject var viewModel: ProductViewModel
     let product: Product
+    @State private var showingAddedToBasketAlert = false
 
     init(product: Product, container: DependencyContainer) {
         self.product = product
@@ -41,7 +42,10 @@ struct ProductView: View {
                         .font(.title)
                         .padding(.leading)
 
-                    Button(action: viewModel.addToBasket) {
+                    Button(action: {
+                        viewModel.addToBasket()
+                        showingAddedToBasketAlert = true
+                    }) {
                         Text("Add to Basket")
                             .foregroundColor(.white)
                             .padding()
@@ -54,6 +58,9 @@ struct ProductView: View {
                 }
                 .padding(.bottom, 20)
             }
+        }
+        .alert(isPresented: $showingAddedToBasketAlert) {
+            Alert(title: Text("Added"), message: Text("The product has been added to the basket"), dismissButton: .default(Text("OK")))
         }
         .navigationBarItems(trailing: Button(action: viewModel.markAsFavourite) {
             Image(systemName: viewModel.isFavourite ? "heart.fill" : "heart")
