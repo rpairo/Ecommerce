@@ -21,17 +21,25 @@ struct LoginView: View {
 
     // MARK: - Views
     var body: some View {
-        VStack {
-            emailField
-            passwordField
-            errorMessage
-            signInButton
+        ZStack {
+            BackgroundImageView(imageName: "AuthBackground")
+            VStack {
+                emailField
+                passwordField
+                errorMessage
+                signInButton
+                    .padding(.top)
+            }
+            .padding()
+            .onAppear {
+                focus = .email
+            }
         }
-        .padding()
-        .onAppear {
-            focus = .email
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Sign In").font(.headline).foregroundColor(.white)
+            }
         }
-
         .navigationTitle("Sign In")
     }
 
@@ -49,6 +57,7 @@ struct LoginView: View {
             .onSubmit {
                 focus = .password
             }
+            .background(.white)
     }
 
     var passwordField: some View {
@@ -57,6 +66,7 @@ struct LoginView: View {
             .border(Color.gray)
             .focused($focus, equals: .password)
             .onSubmit(performSignIn)
+            .background(.white)
     }
 
     var errorMessage: some View {
@@ -70,6 +80,11 @@ struct LoginView: View {
 
     var signInButton: some View {
         Button("Sign In", action: performSignIn)
+            .foregroundColor(.black)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+            .cornerRadius(20)
             .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
     }
 
