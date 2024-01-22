@@ -76,6 +76,14 @@
 		C4C4B1142B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1132B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift */; };
 		C4C4B1162B5DE03B0009E741 /* FavouriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1152B5DE03B0009E741 /* FavouriteUseCase.swift */; };
 		C4C4B1182B5DF2D10009E741 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1172B5DF2D10009E741 /* ProductViewModel.swift */; };
+		C4C4B11A2B5DFB380009E741 /* ToggleFavouriteUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1192B5DFB380009E741 /* ToggleFavouriteUseCaseProtocol.swift */; };
+		C4C4B11C2B5DFC4B0009E741 /* ToggleFavouriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B11B2B5DFC4B0009E741 /* ToggleFavouriteUseCase.swift */; };
+		C4C4B11E2B5DFC730009E741 /* Favouritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B11D2B5DFC730009E741 /* Favouritable.swift */; };
+		C4C4B1202B5DFD410009E741 /* FirebaseFavouriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B11F2B5DFD410009E741 /* FirebaseFavouriteRepository.swift */; };
+		C4C4B1222B5E03BF0009E741 /* Cartable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1212B5E03BF0009E741 /* Cartable.swift */; };
+		C4C4B1242B5E042D0009E741 /* CartUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1232B5E042D0009E741 /* CartUseCaseProtocol.swift */; };
+		C4C4B1262B5E048E0009E741 /* CartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1252B5E048E0009E741 /* CartUseCase.swift */; };
+		C4C4B1282B5E05000009E741 /* FirebaseCartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B1272B5E05000009E741 /* FirebaseCartRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +148,14 @@
 		C4C4B1132B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteUseCaseProtocol.swift; sourceTree = "<group>"; };
 		C4C4B1152B5DE03B0009E741 /* FavouriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteUseCase.swift; sourceTree = "<group>"; };
 		C4C4B1172B5DF2D10009E741 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		C4C4B1192B5DFB380009E741 /* ToggleFavouriteUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleFavouriteUseCaseProtocol.swift; sourceTree = "<group>"; };
+		C4C4B11B2B5DFC4B0009E741 /* ToggleFavouriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleFavouriteUseCase.swift; sourceTree = "<group>"; };
+		C4C4B11D2B5DFC730009E741 /* Favouritable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favouritable.swift; sourceTree = "<group>"; };
+		C4C4B11F2B5DFD410009E741 /* FirebaseFavouriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFavouriteRepository.swift; sourceTree = "<group>"; };
+		C4C4B1212B5E03BF0009E741 /* Cartable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartable.swift; sourceTree = "<group>"; };
+		C4C4B1232B5E042D0009E741 /* CartUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCaseProtocol.swift; sourceTree = "<group>"; };
+		C4C4B1252B5E048E0009E741 /* CartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCase.swift; sourceTree = "<group>"; };
+		C4C4B1272B5E05000009E741 /* FirebaseCartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCartRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +213,8 @@
 				C4407E612B4DEC4500DF0C8D /* Logable.swift */,
 				C45C1C232B5D53DA00EC896E /* Categoriable.swift */,
 				C430263E2B5D86170024ABA9 /* Productable.swift */,
+				C4C4B11D2B5DFC730009E741 /* Favouritable.swift */,
+				C4C4B1212B5E03BF0009E741 /* Cartable.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -216,6 +234,10 @@
 				C430263C2B5D85DD0024ABA9 /* ProductUseCase.swift */,
 				C4C4B1132B5DE00B0009E741 /* FavouriteUseCaseProtocol.swift */,
 				C4C4B1152B5DE03B0009E741 /* FavouriteUseCase.swift */,
+				C4C4B1232B5E042D0009E741 /* CartUseCaseProtocol.swift */,
+				C4C4B1252B5E048E0009E741 /* CartUseCase.swift */,
+				C4C4B1192B5DFB380009E741 /* ToggleFavouriteUseCaseProtocol.swift */,
+				C4C4B11B2B5DFC4B0009E741 /* ToggleFavouriteUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -248,6 +270,8 @@
 				C4407E5D2B4DEC0E00DF0C8D /* FirebaseOrderRepository.swift */,
 				C45C1C2A2B5D54C500EC896E /* FirebaseCategoryRepository.swift */,
 				C43026402B5D87950024ABA9 /* FirebaseProductRepository.swift */,
+				C4C4B11F2B5DFD410009E741 /* FirebaseFavouriteRepository.swift */,
+				C4C4B1272B5E05000009E741 /* FirebaseCartRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -487,6 +511,7 @@
 				C437961F2B473179009EAD1B /* RegisterView.swift in Sources */,
 				C43795D02B421DC5009EAD1B /* CartView.swift in Sources */,
 				C43026392B5D825C0024ABA9 /* CategoryViewModel.swift in Sources */,
+				C4C4B1242B5E042D0009E741 /* CartUseCaseProtocol.swift in Sources */,
 				C437961D2B47292A009EAD1B /* DependencyContainer.swift in Sources */,
 				C4407E5A2B4DEB5E00DF0C8D /* Payment.swift in Sources */,
 				C45C1C2D2B5D55EE00EC896E /* CategoryUseCaseProtocol.swift in Sources */,
@@ -498,7 +523,9 @@
 				C43795CE2B421DBA009EAD1B /* CatalogView.swift in Sources */,
 				C4C4B1182B5DF2D10009E741 /* ProductViewModel.swift in Sources */,
 				C4407E682B4DEC9F00DF0C8D /* LogUseCaseProtocol.swift in Sources */,
+				C4C4B1222B5E03BF0009E741 /* Cartable.swift in Sources */,
 				C43026452B5DA6B50024ABA9 /* ProductDTO.swift in Sources */,
+				C4C4B11C2B5DFC4B0009E741 /* ToggleFavouriteUseCase.swift in Sources */,
 				C45C1C2B2B5D54C500EC896E /* FirebaseCategoryRepository.swift in Sources */,
 				C430263F2B5D86170024ABA9 /* Productable.swift in Sources */,
 				C4407E4E2B4DE74400DF0C8D /* CatalogViewModel.swift in Sources */,
@@ -508,9 +535,12 @@
 				C43026372B5D81880024ABA9 /* CategoryView.swift in Sources */,
 				C4407E522B4DE76900DF0C8D /* FavouritesViewModel.swift in Sources */,
 				C45C1C292B5D548800EC896E /* CategoryDTO.swift in Sources */,
+				C4C4B11E2B5DFC730009E741 /* Favouritable.swift in Sources */,
 				C4407E642B4DEC7700DF0C8D /* OrderUseCaseProtocol.swift in Sources */,
+				C4C4B1262B5E048E0009E741 /* CartUseCase.swift in Sources */,
 				C43796182B470413009EAD1B /* User.swift in Sources */,
 				C4407E582B4DEADB00DF0C8D /* Product.swift in Sources */,
+				C4C4B1282B5E05000009E741 /* FirebaseCartRepository.swift in Sources */,
 				C4407E662B4DEC8500DF0C8D /* OrderUseCase.swift in Sources */,
 				C43795CA2B405D4B009EAD1B /* MainTabView.swift in Sources */,
 				C4407E602B4DEC2700DF0C8D /* Ordeable.swift in Sources */,
@@ -518,6 +548,7 @@
 				C43796122B46FD69009EAD1B /* LoginView.swift in Sources */,
 				C4407E502B4DE75800DF0C8D /* CartViewModel.swift in Sources */,
 				C4407E5E2B4DEC0E00DF0C8D /* FirebaseOrderRepository.swift in Sources */,
+				C4C4B11A2B5DFB380009E741 /* ToggleFavouriteUseCaseProtocol.swift in Sources */,
 				C45C1C222B5C742800EC896E /* NonSelectableLabel.swift in Sources */,
 				C437960D2B4225C4009EAD1B /* AppDelegate.swift in Sources */,
 				C43026472B5DADC90024ABA9 /* ProductView.swift in Sources */,
@@ -533,6 +564,7 @@
 				C4407E6A2B4DECAC00DF0C8D /* LogUseCase.swift in Sources */,
 				C4407E4C2B4DE73000DF0C8D /* DiscoverViewModel.swift in Sources */,
 				C43796162B4703F1009EAD1B /* Authenticatable.swift in Sources */,
+				C4C4B1202B5DFD410009E741 /* FirebaseFavouriteRepository.swift in Sources */,
 				C43795CC2B421DAD009EAD1B /* DiscoverView.swift in Sources */,
 				C4407E5C2B4DEBE000DF0C8D /* FirebaseLogRepository.swift in Sources */,
 				C4407E542B4DE77800DF0C8D /* SettingsViewModel.swift in Sources */,

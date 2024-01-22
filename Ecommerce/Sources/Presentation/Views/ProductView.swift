@@ -54,7 +54,7 @@ struct ProductView: View {
             }
         }
         .navigationBarItems(trailing: Button(action: viewModel.markAsFavourite) {
-            Image(systemName: product.favourite ? "heart.fill" : "heart")
+            Image(systemName: viewModel.isFavourite ? "heart.fill" : "heart")
                 .foregroundColor(.red)
         })
         .toolbar {

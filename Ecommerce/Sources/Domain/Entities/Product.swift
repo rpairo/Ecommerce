@@ -11,7 +11,7 @@ struct Product: Identifiable {
     var id: String
     let manufacturer: String
     let description: String
-    let favourite: Bool
+    var favourite: Bool
     let name: String
     let price: Decimal
     let review: Int

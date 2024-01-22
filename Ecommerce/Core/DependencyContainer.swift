@@ -49,7 +49,7 @@ class DependencyContainer {
     }
 
     func makeProductViewModel(product: Product) -> ProductViewModel {
-        ProductViewModel(product: product)
+        ProductViewModel(product: product, toggleFavouriteUseCase: makeToggleFavouriteUseCase(), cartUseCase: makeCartUseCase())
     }
 
     // MARK: - UseCases
@@ -69,6 +69,14 @@ class DependencyContainer {
         FavouriteUseCase(repository: makeProductRepository())
     }
 
+    func makeToggleFavouriteUseCase() -> ToggleFavouriteUseCaseProtocol {
+        ToggleFavouriteUseCase(repository: makeToggleFavouriteRepository())
+    }
+
+    func makeCartUseCase() -> CartUseCaseProtocol {
+        CartUseCase(repository: makeCartRepository())
+    }
+
     // MARK: - Repositories
     func makeAuthRepository() -> Authenticatable {
         FirebaseAuthRepository()
@@ -80,5 +88,13 @@ class DependencyContainer {
 
     func makeProductRepository() -> Productable {
         FirebaseProductRepository()
+    }
+
+    func makeToggleFavouriteRepository() -> Favouritable {
+        FirebaseFavouriteRepository()
+    }
+
+    func makeCartRepository() -> Cartable {
+        FirebaseCartRepository()
     }
 }

@@ -10,5 +10,5 @@ import Foundation
 typealias FavouriteResult = (Result<[Product], Error>) -> Void
 
 protocol FavouriteUseCaseProtocol {
-    func execute(completion: @escaping ProductResult)
+    func execute(completion: @escaping FavouriteResult)
 }

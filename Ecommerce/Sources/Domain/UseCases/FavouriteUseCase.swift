@@ -14,7 +14,7 @@ class FavouriteUseCase: FavouriteUseCaseProtocol {
         self.repository = repository
     }
 
-    func execute(completion: @escaping ProductResult) {
+    func execute(completion: @escaping FavouriteResult) {
         repository.fetchFavouriteProducts(completion: completion)
     }
 }
